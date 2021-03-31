@@ -36,3 +36,7 @@
 # 四、业务流程
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0331/092033_57304781_7758392.png "屏幕截图.png")
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0331/092043_c2e31f08_7758392.png "屏幕截图.png")
+# 五、配套资料源码
+链接：https://pan.baidu.com/s/1s3rYWZnpyv9U-gSFbZYC7w 
+提取码：hjlo 
+复制这段内容后打开百度网盘手机App，操作更方便哦
