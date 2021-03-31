@@ -1,0 +1,19 @@
+server:
+  port: 8110 # 服务端口
+
+spring:
+  profiles:
+    active: dev # 环境设置
+  application:
+    name: service-core # 服务名
+  datasource: # mysql数据库连接
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/srb_core?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: root
+
+mybatis-plus: #mybatis
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:jw/srb/core/mapper/xml/*.xml
