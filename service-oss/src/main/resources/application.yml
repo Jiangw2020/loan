@@ -1,0 +1,20 @@
+server:
+  port: 8130 # 服务端口
+
+spring:
+  profiles:
+    active: dev # 环境设置
+  application:
+    name: service-oss # 服务名
+
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848 # nacos服务地址
+
+aliyun:
+  oss:
+    endpoint: oss-c
+    key-id: LTAI4GK
+    bucket-name: jw
+    key-secret: 7bq
