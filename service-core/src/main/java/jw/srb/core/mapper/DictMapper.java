@@ -1,7 +1,11 @@
 package jw.srb.core.mapper;
 
+import jw.srb.core.pojo.dto.ExcelDictDTO;
 import jw.srb.core.pojo.entity.Dict;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface DictMapper extends BaseMapper<Dict> {
 
+    void insertBatch(@Param("list") List<ExcelDictDTO> list);
 }

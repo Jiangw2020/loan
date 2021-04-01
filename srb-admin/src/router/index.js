@@ -88,7 +88,22 @@ export const constantRoutes = [
       }
     ]
   },
-
+  {
+    path: '/core',
+    component: Layout,
+    redirect: '/core/dict/list',
+    name: 'coreDict',
+    meta: { title: '系统设置', icon: 'el-icon-setting' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'dict/list',
+        name: '数据字典',
+        component: () => import('@/views/core/dict/list'),
+        meta: { title: '数据字典' }
+      }
+    ]
+  },
   {
     path: '/example',
     component: Layout,
