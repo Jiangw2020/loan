@@ -1,0 +1,16 @@
+{
+  "name": "srb-site",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.3",
+    "element-ui": "^2.14.1",
+    "js-cookie": "^2.2.1",
+    "nuxt": "^2.14.10",
+    "vue-qriously": "^1.1.1"
+  }
+}

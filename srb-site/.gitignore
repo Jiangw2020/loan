@@ -1,0 +1,15 @@
+
+.DS_Store
+.nuxt
+node_modules/
+dist/
+npm-debug.log*
+package-lock.json
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

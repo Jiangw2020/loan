@@ -1,0 +1,297 @@
+/*注册登陆页面*/
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+  clear: both;
+}
+.register {
+  min-height: 560px;
+  _height: 330px;
+  margin: 20px 0px;
+  background: #fff url(../images/registerRbg1.gif) 750px 220px no-repeat;
+  display: block;
+  overflow: hidden;
+}
+/* .register1{ background:#fff url(../images/resigerBg1.jpg) 650px 230px no-repeat} */
+.registerTitle {
+  font-size: 18px;
+  background: url(../images/icon5.gif) no-repeat 70px center;
+  padding-left: 90px;
+  border-bottom: 1px solid #ececec;
+  line-height: 45px;
+}
+.registerLc1 {
+  background: url(../images/register1.gif) no-repeat;
+  width: 959px;
+  height: 57px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px auto 0 auto;
+}
+.loginPage {
+  min-height: 500px;
+  _height: 330px;
+  margin-top: 20px;
+  background: #fff url(../images/registerRbg1.gif) 620px 80px no-repeat;
+}
+.registerLc1 .p1 {
+  position: absolute;
+  left: 120px;
+  color: #fff;
+  top: 18px;
+}
+.registerLc1 .p2 {
+  position: absolute;
+  left: 610px;
+  color: #0e592e;
+  top: 18px;
+}
+.registerLc2 {
+  background: url(../images/register3.gif) no-repeat;
+  width: 959px;
+  height: 57px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px auto 0 auto;
+}
+.registerLc2 .p1 {
+  position: absolute;
+  left: 120px;
+  color: #0e592e;
+  top: 18px;
+}
+.registerLc2 .p2 {
+  position: absolute;
+  left: 610px;
+  color: #fff;
+  top: 18px;
+}
+.registerCont .input {
+  width: 242px;
+  height: 32px;
+  vertical-align: middle;
+  border: 1px solid #b4b9bd;
+  border-radius: 3px;
+  line-height: 40px;
+  padding: 4px;
+}
+.registerCont .huoqu {
+  background: #ececec;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+.registerCont {
+  margin-top: 30px;
+  _padding-bottom: 100px;
+}
+.registerCont .input1 {
+  width: 125px;
+}
+.registerCont .input2 {
+  width: 143px;
+}
+.registerCont .dis {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+.registerCont ul li {
+  margin-bottom: 20px;
+}
+.registerCont ul li.telNumber .button {
+  display: inline-block;
+  color: #fff;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #0e592e;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: 0;
+}
+.registerCont ul li.telNumber .button.disabled {
+  border: 1px solid #c9d0de;
+  color: #aaa;
+  background-color: #eee;
+}
+.registerCont ul li.telNumber1 input {
+  width: 120px;
+}
+.registerCont ul li .info {
+  margin-left: 10px;
+}
+.registerCont ul li.btn {
+  margin-left: 160px;
+}
+.registerCont ul li.btn1 {
+  margin-top: 30px;
+}
+.registerCont ul li.error {
+  margin-left: 160px;
+  line-height: 25px;
+  height: 25px;
+  color: #ff7800;
+  margin-bottom: 10px;
+}
+
+.registerCont ul li.btn button,
+.registerCont ul li.btn a {
+  display: block;
+  width: 120px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  font-size: 18px;
+  background: #0e592e;
+  border-radius: 3px;
+  border: none;
+  border: 0;
+  cursor: pointer;
+  font-family: '微软雅黑';
+}
+.registerCont ul li.btn button.disabled {
+  border: 1px solid #c9d0de;
+  color: #aaa;
+  background-color: #eee;
+}
+.registerCont ul li.btn a:hover {
+  background: #0fa24e;
+}
+.registerCont ul li.jiami {
+  /* background: url(../images/icon6.gif) no-repeat 0 center;
+  text-indent: 20px; */
+  margin-left: 160px;
+}
+.registerCont ul li.agree {
+  margin-left: 160px;
+}
+.registerCont ul li.agree a {
+  color: #349cda;
+}
+.registerCont ul li.scses {
+  background: url(../images/icon7.gif) no-repeat 0 5px;
+  width: 540px;
+  margin-top: 100px;
+  margin-left: 150px;
+  padding-left: 30px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 35px;
+}
+.registerCont ul li.rz {
+  margin: 15px 0 15px 150px;
+}
+.registerCont ul li.rz .btn {
+  display: inline-block;
+  padding: 0 15px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  font-size: 18px;
+  background: #0e592e;
+  border-radius: 3px;
+}
+.registerCont ul li.rz a.blue {
+  color: #349cd8;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+.registerCont ul li.rz .btn:hover {
+  background: #0fa24e;
+}
+.registerCont ul li.scses a.blue {
+  color: #349cd8;
+  text-decoration: underline;
+  margin: 0 5px;
+}
+.registerCont ul li.agree a:hover {
+  text-decoration: underline;
+}
+.registerCont ul.YZtel {
+  margin-left: 40px;
+}
+.forgetPsd {
+  background-color: #fff;
+}
+.valign {
+  vertical-align: middle;
+}
+.f5 {
+  display: inline-block;
+  /* background: url(../images/f5.gif) no-repeat; */
+  width: 42px;
+  height: 42px;
+  line-height: 58px;
+  vertical-align: top;
+  text-align: center;
+}
+#log_error {
+  margin-left: 160px;
+  height: 30px;
+  line-height: 30px;
+  color: red;
+}
+
+.telList {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.emailList {
+  margin-top: 40px;
+}
+.telList li {
+  margin-bottom: 18px;
+}
+.telList li .blue {
+  color: #349cd8;
+  margin-left: 15px;
+}
+.telList li .blue:hover {
+  text-decoration: underline;
+}
+.telList li .input {
+  width: 100px;
+  height: 30px;
+  margin: 0 5px;
+  vertical-align: middle;
+  border: 1px solid #b4b9bd;
+  border-radius: 3px;
+}
+.telList li .input1 {
+  width: 250px;
+  height: 30px;
+  margin: 0 5px;
+  vertical-align: middle;
+  border: 1px solid #b4b9bd;
+  border-radius: 3px;
+}
+.telList li .btn {
+  background: #ececec;
+  display: inline-block;
+  padding: 3px 6px;
+}
+.telList li.btn1 {
+  margin-left: 75px;
+}
+.telList li.btn1 a {
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 18px;
+  background: #0e592e;
+  border-radius: 5px;
+}
+.telList li.time {
+  margin-left: 75px;
+}
