@@ -1,4 +1,4 @@
-package jw.srb.core;
+package jw.srb.sms;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,11 +6,12 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({"jw.srb"})
-public class ServiceCoreApplication {
+//@EnableFeignClients
+public class ServiceSmsApplication {
 
     public static void main(String[] args) {
         try{
-            SpringApplication.run(ServiceCoreApplication.class, args);
+            SpringApplication.run(ServiceSmsApplication.class, args);
         }catch (Exception e){
             e.printStackTrace();
         }
