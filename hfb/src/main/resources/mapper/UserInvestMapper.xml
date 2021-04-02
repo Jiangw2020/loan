@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.heepay.mapper.UserInvestMapper">
+
+	<resultMap id="UserInvestMap" type="com.heepay.model.UserInvest">
+		<result property="id" column="id"/>
+		<result property="voteBindCode" column="vote_bind_code"/>
+		<result property="benefitBindCode" column="benefit_bind_code"/>
+		<result property="agentProjectCode" column="agent_project_code"/>
+		<result property="agentProjectName" column="agent_project_name"/>
+		<result property="agentBillNo" column="agent_bill_no"/>
+		<result property="voteAmt" column="vote_amt"/>
+		<result property="votePrizeAmt" column="vote_prize_amt"/>
+		<result property="voteFeeAmt" column="vote_fee_amt"/>
+		<result property="projectAmt" column="project_amt"/>
+		<result property="note" column="note"/>
+		<result property="status" column="status"/>
+		<result property="createTime" column="create_time"/>
+		<result property="updateTime" column="update_time"/>
+		<result property="isDeleted" column="is_deleted"/>
+	</resultMap>
+
+	<!-- 用于select查询公用抽取的列 -->
+	<sql id="columns">
+		id,vote_bind_code,benefit_bind_code,agent_project_code,agent_project_name,agent_bill_no,vote_amt,vote_prize_amt,vote_fee_amt,project_amt,note,status,create_time,update_time,is_deleted
+	</sql>
+
+	<select id="selectPage" resultMap="UserInvestMap">
+		select <include refid="columns" />
+		from user_invest
+		<where>
+			<if test="vo.voteBindCode != null and vo.voteBindCode != ''">
+				and vote_bind_code = #{vo.voteBindCode}
+			</if>
+			<if test="vo.benefitBindCode != null and vo.benefitBindCode != ''">
+				and benefit_bind_code = #{vo.benefitBindCode}
+			</if>
+			<if test="vo.agentProjectCode != null and vo.agentProjectCode != ''">
+				and agent_project_code = #{vo.agentProjectCode}
+			</if>
+		</where>
+		order by id desc
+	</select>
+
+    <select id="selectSumVoteAmtByAgentProjectCode" resultType="java.lang.String">
+    	select sum(vote_amt)
+	    from user_invest
+		where agent_project_code = #{agentProjectCode}
+	</select>
+
+	<select id="selectByAgentProjectCode" resultMap="UserInvestMap">
+    	select <include refid="columns" />
+	    from user_invest
+		where agent_project_code = #{agentProjectCode}
+		limit 1
+	</select>
+
+	<select id="selectStatusByAgentProjectCode" resultType="java.lang.Integer">
+    	select status
+	    from user_invest
+		where agent_project_code = #{agentProjectCode}
+		limit 1
+	</select>
+
+</mapper>
+

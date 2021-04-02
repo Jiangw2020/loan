@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+    <title>用户绑定汇付宝</title>
+    <link rel="icon" href="/images/favicon.ico">
+    <link href="/css/base.css" rel="stylesheet" type="text/css" media="screen"/>
+    <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<div class="tophui">
+    <div class="topcont" align="right">汇付宝托管平台</div>
+</div>
+<div class="header">
+    <div class="fl"><a href="http://www.heepay.com/"><img src="/images/logo.png" width="169" height="61"/></a></div>
+    <input type="submit" name="button" id="button" value="搜索" class="s_button fr"/>
+    <div class="search"><input name="" type="text" class="s_input"/>
+    </div>
+</div>
+
+<div id="main" class="line">
+    <form id="form" action="/userBind/save" method="post">
+        <input type="hidden" th:each="map : ${paramMap}" th:name="${map.key}" th:value="${map.value}"/>
+
+        <div style="padding: 20px 20px">
+            <div class="divTitle">绑定信息</div>
+            <div style="padding: 5px 5px">个人信息</div>
+            <table class="gridtable">
+                <tr>
+                    <td width="50%">姓名：<span th:text="${paramMap.personalName}"></span></td>
+                    <td>证件类型：身份证</td>
+                </tr>
+                <tr>
+                    <td width="50%">证件号码：<span th:text="${paramMap.idCard}"></span></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div style="padding: 5px 5px;margin-top: 30px;">银行卡绑定信息</div>
+            <table class="gridtable">
+                <tr>
+                    <td width="50%">银行卡号：<span th:text="${paramMap.bankNo}"></span></td>
+                    <td>银行类型：民生银行</td>
+                </tr>
+                <tr>
+                    <td width="50%">预留手机：<span th:text="${paramMap.mobile}"></span>&nbsp;&nbsp;<a href="javascript:">获取验证码</a></td>
+                    <td>校验手机：<input name="code" class="inputTxt"></td>
+                </tr>
+            </table>
+
+            <div style="padding: 5px 5px;margin-top: 30px;">设置支付密码</div>
+            <table class="gridtable">
+                <tr>
+                    <td width="50%">设置密码：<input type="password" name="payPasswd" class="inputTxt" maxlength="9"></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div style="padding: 5px 5px; margin-top: 20px;">
+                <input type="button" id="submitForm" value="确定" class="inputSubmit"/>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="footer">
+    <p class="hui">地址：北京市海淀区 电话：010-88888888</p>
+    <p class="hui">Copyright © 2020 北京尚融宝科技有限公司 All Rights Reserved  京ICP备15000000号</p>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#submitForm").click(function(){
+            var payPasswd = $("#payPasswd").val();
+            if(payPasswd == '') {
+                alert("支付密码必须输入")
+                return
+            }
+            $("#form").submit();
+        });
+    });
+</script>
+</body>
+</html>
