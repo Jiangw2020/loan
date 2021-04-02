@@ -62,24 +62,23 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
         </dependency>
-<!--
-        &lt;!&ndash;服务发现&ndash;&gt;
+        <!--服务发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
-        &lt;!&ndash;服务调用&ndash;&gt;
+        <!--服务调用-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-        &lt;!&ndash;服务容错&ndash;&gt;
+        <!--服务容错-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>-->
+        </dependency>
 
         <!-- json解析 -->
         <dependency>

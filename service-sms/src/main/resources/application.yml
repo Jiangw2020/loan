@@ -21,31 +21,31 @@ spring:
         max-idle: 8     #最大空闲连接，默认8
         min-idle: 0     #最小空闲连接，默认0
 
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: localhost:8848 # nacos服务地址
-#
-#feign:
-#  client:
-#    config:
-#      default:
-#        connectTimeout: 10000 #连接超时配置
-#        readTimeout: 600000 #执行超时配置
-#  #开启Feign对Sentinel的支持
-#  #feign:
-#  sentinel:
-#    enabled: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # nacos服务地址
 
-#logging:
-#  level:
-#    com.atguigu.srb.sms.client.CoreUserInfoClient: DEBUG #以什么级别监控哪个接口
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000 #连接超时配置
+        readTimeout: 600000 #执行超时配置
+#  #开启Feign对Sentinel的支持
+  #feign:
+  sentinel:
+    enabled: true
+
+logging:
+  level:
+    jw.srb.sms.client: DEBUG #以什么级别监控哪个接口
 
 #阿里云短信
 aliyun:
   sms:
-    region-id: cn-han
-    key-id: LTAI4G5Sv
-    key-secret: N7v6R
-    template-code: SM
+    region-id: cn-hang
+    key-id: LTAI4G5Svn
+    key-secret: N7v6R4
+    template-code: SMS
     sign-name: 谷粒

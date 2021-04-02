@@ -24,6 +24,10 @@ spring:
         max-wait: -1    #最大阻塞等待时间，负值表示没限制，默认-1
         max-idle: 8     #最大空闲连接，默认8
         min-idle: 0     #最小空闲连接，默认0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 mybatis-plus: #mybatis
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
