@@ -113,7 +113,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> i
         return userInfoVO;
     }
 
-//    @Override
+    @Override
     public IPage<UserInfo> listPage(Page<UserInfo> pageParam, UserInfoQuery userInfoQuery) {
 
         if(userInfoQuery == null){
@@ -145,7 +145,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> i
         return baseMapper.selectPage(pageParam, userInfoQueryWrapper);
     }
 
-//    @Override
+    @Override
     public void lock(Long id, Integer status) {
 
         UserInfo userInfo = new UserInfo();

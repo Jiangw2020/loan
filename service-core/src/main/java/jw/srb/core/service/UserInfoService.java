@@ -1,7 +1,10 @@
 package jw.srb.core.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import jw.srb.core.pojo.entity.UserInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import jw.srb.core.pojo.query.UserInfoQuery;
 import jw.srb.core.pojo.vo.LoginVO;
 import jw.srb.core.pojo.vo.RegisterVO;
 import jw.srb.core.pojo.vo.UserInfoVO;
@@ -21,4 +24,8 @@ public interface UserInfoService extends IService<UserInfo> {
     UserInfoVO login(LoginVO loginVO, String ip);
 
     boolean checkMobile(String mobile);
+
+    IPage<UserInfo> listPage(Page<UserInfo> pageParam, UserInfoQuery userInfoQuery);
+
+    void lock(Long id, Integer status);
 }
