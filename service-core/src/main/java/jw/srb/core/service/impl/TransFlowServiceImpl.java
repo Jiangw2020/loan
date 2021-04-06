@@ -43,4 +43,11 @@ public class TransFlowServiceImpl extends ServiceImpl<TransFlowMapper, TransFlow
         transFlow.setUserName(userInfo.getName());
         baseMapper.insert(transFlow);
     }
+    @Override
+    public boolean isSaveTransFlow(String agentBillNo) {
+        QueryWrapper<TransFlow> transFlowQueryWrapper = new QueryWrapper<>();
+        transFlowQueryWrapper.eq("trans_no", agentBillNo);
+        Integer count = baseMapper.selectCount(transFlowQueryWrapper);
+        return count > 0;
+    }
 }
