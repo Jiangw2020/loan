@@ -105,6 +105,41 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/core/borrower',
+    component: Layout,
+    name: 'coreBorrower',
+    meta: { title: '借款管理', icon: 'el-icon-s-unfold' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'list',
+        name: 'coreBorrowerList',
+        component: () => import('@/views/core/borrower/list'),
+        meta: { title: '借款人列表' }
+      },
+      {
+        path: 'detail/:id',
+        name: 'coreBorrowerDetail',
+        component: () => import('@/views/core/borrower/detail'),
+        meta: { title: '借款人详情' },
+        hidden: true
+      },
+      {
+        path: 'info-list',
+        name: 'coreBorrowInfoList',
+        component: () => import('@/views/core/borrow-info/list'),
+        meta: { title: '借款列表' }
+      },
+      {
+        path: 'info-detail/:id',
+        name: 'coreBorrowInfoDetail',
+        component: () => import('@/views/core/borrow-info/detail'),
+        meta: { title: '借款详情' },
+        hidden: true
+      }
+    ]
+  },
+  {
     path: '/core',
     component: Layout,
     redirect: '/core/dict/list',

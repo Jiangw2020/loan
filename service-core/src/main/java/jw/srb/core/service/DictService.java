@@ -21,4 +21,8 @@ public interface DictService extends IService<Dict> {
     List listDictData();
 
     List<Dict> listByParentId(Long parentId);
+
+    List<Dict> findByDictCode(String dictCode);
+
+    String getNameByParentDictCodeAndValue(String education, Integer education1);
 }
