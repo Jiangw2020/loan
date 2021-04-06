@@ -140,6 +140,28 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/core/lend',
+    component: Layout,
+    name: 'coreLend',
+    meta: { title: '标的管理', icon: 'el-icon-s-flag' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'list',
+        name: 'coreLendList',
+        component: () => import('@/views/core/lend/list'),
+        meta: { title: '标的列表' }
+      },
+      {
+        path: 'detail/:id',
+        name: 'coreLendDetail',
+        component: () => import('@/views/core/lend/detail'),
+        meta: { title: '标的详情' },
+        hidden: true
+      }
+    ]
+  },
+  {
     path: '/core',
     component: Layout,
     redirect: '/core/dict/list',

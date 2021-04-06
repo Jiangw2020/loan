@@ -1,5 +1,6 @@
 package jw.srb.core.service;
 
+import jw.srb.core.pojo.bo.TransFlowBO;
 import jw.srb.core.pojo.entity.TransFlow;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,4 +14,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TransFlowService extends IService<TransFlow> {
 
+    void saveTransFlow(TransFlowBO investTransFlowBO);
 }
