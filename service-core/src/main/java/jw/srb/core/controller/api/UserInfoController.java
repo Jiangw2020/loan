@@ -10,6 +10,7 @@ import jw.srb.common.result.ResponseEnum;
 import jw.srb.common.util.RegexValidateUtils;
 import jw.srb.core.pojo.vo.LoginVO;
 import jw.srb.core.pojo.vo.RegisterVO;
+import jw.srb.core.pojo.vo.UserIndexVO;
 import jw.srb.core.pojo.vo.UserInfoVO;
 import jw.srb.core.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
@@ -100,6 +101,15 @@ public class UserInfoController {
     @GetMapping("/checkMobile/{mobile}")
     public boolean checkMobile(@PathVariable String mobile){
         return userInfoService.checkMobile(mobile);
+    }
+
+    @ApiOperation("获取个人空间用户信息")
+    @GetMapping("/auth/getIndexUserInfo")
+    public R getIndexUserInfo(HttpServletRequest request) {
+        String token = request.getHeader("token");
+        Long userId = JwtUtils.getUserId(token);
+        UserIndexVO userIndexVO = userInfoService.getIndexUserInfo(userId);
+        return R.ok().data("userIndexVO", userIndexVO);
     }
 }
 

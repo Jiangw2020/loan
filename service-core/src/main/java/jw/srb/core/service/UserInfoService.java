@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import jw.srb.core.pojo.query.UserInfoQuery;
 import jw.srb.core.pojo.vo.LoginVO;
 import jw.srb.core.pojo.vo.RegisterVO;
+import jw.srb.core.pojo.vo.UserIndexVO;
 import jw.srb.core.pojo.vo.UserInfoVO;
 
 /**
@@ -28,4 +29,6 @@ public interface UserInfoService extends IService<UserInfo> {
     IPage<UserInfo> listPage(Page<UserInfo> pageParam, UserInfoQuery userInfoQuery);
 
     void lock(Long id, Integer status);
+
+    UserIndexVO getIndexUserInfo(Long userId);
 }
