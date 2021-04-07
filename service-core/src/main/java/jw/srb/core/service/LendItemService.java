@@ -2,8 +2,10 @@ package jw.srb.core.service;
 
 import jw.srb.core.pojo.entity.LendItem;
 import com.baomidou.mybatisplus.extension.service.IService;
+import jw.srb.core.pojo.vo.InvestVO;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -18,4 +20,8 @@ public interface LendItemService extends IService<LendItem> {
     List<LendItem> selectByLendId(Long lendId, Integer status);
 
     List<LendItem> selectByLendId(Long lendId);
+
+    String commitInvest(InvestVO investVO);
+
+    void notify(Map<String, Object> paramMap);
 }
